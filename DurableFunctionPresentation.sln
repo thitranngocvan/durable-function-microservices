@@ -7,8 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DurableFunctionPresentation
 EndProject
 Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "WebClient", "WebClient\WebClient.njsproj", "{57701EA9-A2AC-49D5-8AF3-9F4AD20EF2F7}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FunctionApp1", "FunctionApp1\FunctionApp1.csproj", "{AA22F6AF-4058-4014-851C-94C30325C7BA}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DatabaseSetup", "DatabaseSetup\DatabaseSetup.csproj", "{AD8FBBB0-E2DD-4806-982E-F46A48AB4DED}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzureTableStorageRepository", "AzureTableStorageRepository\AzureTableStorageRepository.csproj", "{BE47C52C-5C74-4C73-B62B-75F733C5CA88}"
@@ -29,10 +27,6 @@ Global
 		{57701EA9-A2AC-49D5-8AF3-9F4AD20EF2F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{57701EA9-A2AC-49D5-8AF3-9F4AD20EF2F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{57701EA9-A2AC-49D5-8AF3-9F4AD20EF2F7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AA22F6AF-4058-4014-851C-94C30325C7BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AA22F6AF-4058-4014-851C-94C30325C7BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AA22F6AF-4058-4014-851C-94C30325C7BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AA22F6AF-4058-4014-851C-94C30325C7BA}.Release|Any CPU.Build.0 = Release|Any CPU
 		{AD8FBBB0-E2DD-4806-982E-F46A48AB4DED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{AD8FBBB0-E2DD-4806-982E-F46A48AB4DED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AD8FBBB0-E2DD-4806-982E-F46A48AB4DED}.Release|Any CPU.ActiveCfg = Release|Any CPU

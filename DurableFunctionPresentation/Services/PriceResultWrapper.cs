@@ -16,5 +16,7 @@ namespace DurableFunctionPresentation.Services
         public string Doors { get; set; }
         public string Seats { get; set; }
 
+        public decimal SupplierPrice { get; set; }
+
     }
 }

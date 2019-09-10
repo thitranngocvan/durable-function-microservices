@@ -1086,11 +1086,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projects\\Durable-Function\\DatabaseSetup\\DatabaseSetup.csproj",
+      "projectUniqueName": "D:\\Projects\\durable-function-vnw-event\\durable-function-microservices\\DatabaseSetup\\DatabaseSetup.csproj",
       "projectName": "DatabaseSetup",
-      "projectPath": "D:\\Projects\\Durable-Function\\DatabaseSetup\\DatabaseSetup.csproj",
+      "projectPath": "D:\\Projects\\durable-function-vnw-event\\durable-function-microservices\\DatabaseSetup\\DatabaseSetup.csproj",
       "packagesPath": "C:\\Users\\van.thi\\.nuget\\packages\\",
-      "outputPath": "D:\\Projects\\Durable-Function\\DatabaseSetup\\obj\\",
+      "outputPath": "D:\\Projects\\durable-function-vnw-event\\durable-function-microservices\\DatabaseSetup\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -1109,8 +1109,8 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "D:\\Projects\\Durable-Function\\AzureTableStorageRepository\\AzureTableStorageRepository.csproj": {
-              "projectPath": "D:\\Projects\\Durable-Function\\AzureTableStorageRepository\\AzureTableStorageRepository.csproj"
+            "D:\\Projects\\durable-function-vnw-event\\durable-function-microservices\\AzureTableStorageRepository\\AzureTableStorageRepository.csproj": {
+              "projectPath": "D:\\Projects\\durable-function-vnw-event\\durable-function-microservices\\AzureTableStorageRepository\\AzureTableStorageRepository.csproj"
             }
           }
         }

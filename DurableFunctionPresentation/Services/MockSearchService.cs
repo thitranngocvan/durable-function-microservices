@@ -27,7 +27,7 @@ namespace DurableFunctionPresentation.Services
             var cars = _searchResultFromDataFile.PriceResults.Where(c => c.SupplierId == supplierId).Take(50);
             return cars.Select(c => new SupplierCarPrice {
                 Currency = searchRequest.CurrencyCode,
-                SupplierBasePrice = c.LocalPrice - 10,
+                SupplierBasePrice = c.SupplierPrice,
                 SupplierCar = new SupplierCar {
                     Name = c.CarName,
                     Seats = c.Seats

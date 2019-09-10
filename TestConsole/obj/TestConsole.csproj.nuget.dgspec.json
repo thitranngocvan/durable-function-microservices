@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projects\\Durable-Function\\TestConsole\\TestConsole.csproj": {}
+    "D:\\Projects\\durable-function-vnw-event\\durable-function-microservices\\TestConsole\\TestConsole.csproj": {}
   },
   "projects": {
-    "D:\\Projects\\Durable-Function\\TestConsole\\TestConsole.csproj": {
+    "D:\\Projects\\durable-function-vnw-event\\durable-function-microservices\\TestConsole\\TestConsole.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\Durable-Function\\TestConsole\\TestConsole.csproj",
+        "projectUniqueName": "D:\\Projects\\durable-function-vnw-event\\durable-function-microservices\\TestConsole\\TestConsole.csproj",
         "projectName": "TestConsole",
-        "projectPath": "D:\\Projects\\Durable-Function\\TestConsole\\TestConsole.csproj",
+        "projectPath": "D:\\Projects\\durable-function-vnw-event\\durable-function-microservices\\TestConsole\\TestConsole.csproj",
         "packagesPath": "C:\\Users\\van.thi\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\Durable-Function\\TestConsole\\obj\\",
+        "outputPath": "D:\\Projects\\durable-function-vnw-event\\durable-function-microservices\\TestConsole\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

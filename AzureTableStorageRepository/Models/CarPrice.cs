@@ -16,7 +16,7 @@ namespace AzureTableStorageRepository.Models
 
         public decimal Price { get; set; }
 
-        public decimal SupplierPrice { get; set; }
+        //public decimal SupplierPrice { get; set; }
 
         public Guid PriceRateId { get; set; }
 

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projects\\Durable-Function\\DurableFunctionPresentation\\DurableFunctionPresentation.csproj": {}
+    "D:\\Projects\\durable-function-vnw-event\\durable-function-microservices\\DurableFunctionPresentation\\DurableFunctionPresentation.csproj": {}
   },
   "projects": {
-    "D:\\Projects\\Durable-Function\\AzureTableStorageRepository\\AzureTableStorageRepository.csproj": {
+    "D:\\Projects\\durable-function-vnw-event\\durable-function-microservices\\AzureTableStorageRepository\\AzureTableStorageRepository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\Durable-Function\\AzureTableStorageRepository\\AzureTableStorageRepository.csproj",
+        "projectUniqueName": "D:\\Projects\\durable-function-vnw-event\\durable-function-microservices\\AzureTableStorageRepository\\AzureTableStorageRepository.csproj",
         "projectName": "AzureTableStorageRepository",
-        "projectPath": "D:\\Projects\\Durable-Function\\AzureTableStorageRepository\\AzureTableStorageRepository.csproj",
+        "projectPath": "D:\\Projects\\durable-function-vnw-event\\durable-function-microservices\\AzureTableStorageRepository\\AzureTableStorageRepository.csproj",
         "packagesPath": "C:\\Users\\van.thi\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\Durable-Function\\AzureTableStorageRepository\\obj\\",
+        "outputPath": "D:\\Projects\\durable-function-vnw-event\\durable-function-microservices\\AzureTableStorageRepository\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -60,14 +60,14 @@
         }
       }
     },
-    "D:\\Projects\\Durable-Function\\DurableFunctionPresentation\\DurableFunctionPresentation.csproj": {
+    "D:\\Projects\\durable-function-vnw-event\\durable-function-microservices\\DurableFunctionPresentation\\DurableFunctionPresentation.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\Durable-Function\\DurableFunctionPresentation\\DurableFunctionPresentation.csproj",
+        "projectUniqueName": "D:\\Projects\\durable-function-vnw-event\\durable-function-microservices\\DurableFunctionPresentation\\DurableFunctionPresentation.csproj",
         "projectName": "DurableFunctionPresentation",
-        "projectPath": "D:\\Projects\\Durable-Function\\DurableFunctionPresentation\\DurableFunctionPresentation.csproj",
+        "projectPath": "D:\\Projects\\durable-function-vnw-event\\durable-function-microservices\\DurableFunctionPresentation\\DurableFunctionPresentation.csproj",
         "packagesPath": "C:\\Users\\van.thi\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\Durable-Function\\DurableFunctionPresentation\\obj\\",
+        "outputPath": "D:\\Projects\\durable-function-vnw-event\\durable-function-microservices\\DurableFunctionPresentation\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -86,8 +86,8 @@
         "frameworks": {
           "netcoreapp2.2": {
             "projectReferences": {
-              "D:\\Projects\\Durable-Function\\AzureTableStorageRepository\\AzureTableStorageRepository.csproj": {
-                "projectPath": "D:\\Projects\\Durable-Function\\AzureTableStorageRepository\\AzureTableStorageRepository.csproj"
+              "D:\\Projects\\durable-function-vnw-event\\durable-function-microservices\\AzureTableStorageRepository\\AzureTableStorageRepository.csproj": {
+                "projectPath": "D:\\Projects\\durable-function-vnw-event\\durable-function-microservices\\AzureTableStorageRepository\\AzureTableStorageRepository.csproj"
               }
             }
           }
