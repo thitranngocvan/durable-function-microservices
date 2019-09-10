@@ -1,0 +1,9 @@
+{
+  "name": "web-client",
+  "version": "0.0.0",
+  "description": "WebClient",
+  "main": "server.js",
+  "author": {
+    "name": ""
+  }
+}

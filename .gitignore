@@ -1,3 +1,5 @@
+# VS File
+.vs
 # Prerequisites
 *.d
 
@@ -6,6 +8,8 @@
 *.lo
 *.o
 *.obj
+bin
+debug
 
 # Precompiled Headers
 *.gch
