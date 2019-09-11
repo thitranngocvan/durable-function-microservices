@@ -418,6 +418,19 @@
           "lib/netstandard2.0/Microsoft.Azure.WebJobs.Extensions.Http.dll": {}
         }
       },
+      "Microsoft.Azure.WebJobs.Extensions.SendGrid/3.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Azure.WebJobs": "3.0.0",
+          "SendGrid": "9.9.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Azure.WebJobs.Extensions.SendGrid.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Azure.WebJobs.Extensions.SendGrid.dll": {}
+        }
+      },
       "Microsoft.Azure.WebJobs.Host.Storage/3.0.0": {
         "type": "package",
         "dependencies": {
@@ -1121,6 +1134,20 @@
         },
         "runtime": {
           "lib/netstandard1.0/_._": {}
+        }
+      },
+      "Sendgrid/9.9.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Http.Abstractions": "1.1.0",
+          "NETStandard.Library": "1.6.1",
+          "Newtonsoft.Json": "9.0.1"
+        },
+        "compile": {
+          "lib/netstandard1.3/SendGrid.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/SendGrid.dll": {}
         }
       },
       "System.AppContext/4.1.0": {
@@ -2414,6 +2441,18 @@
         "microsoft.azure.webjobs.extensions.http.nuspec"
       ]
     },
+    "Microsoft.Azure.WebJobs.Extensions.SendGrid/3.0.0": {
+      "sha512": "QV9JI2y0su9ZoF1eJ++oZX9l4E50pzh4tmrKDFN85hX9s7I73Y2BFuKZbAgnwimwd5IFZURojGKlc/8BqrKmTw==",
+      "type": "package",
+      "path": "microsoft.azure.webjobs.extensions.sendgrid/3.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.Azure.WebJobs.Extensions.SendGrid.dll",
+        "microsoft.azure.webjobs.extensions.sendgrid.3.0.0.nupkg.sha512",
+        "microsoft.azure.webjobs.extensions.sendgrid.nuspec"
+      ]
+    },
     "Microsoft.Azure.WebJobs.Host.Storage/3.0.0": {
       "sha512": "AoMA7rmeiE+tH32XDz53ZYcGbZbjTNURX5ezS8tckHUrzMH8tQvRtGQEsPZcaT673dXkcz4cjvKlvXfbdP22gw==",
       "type": "package",
@@ -3519,6 +3558,23 @@
         "lib/netstandard1.0/_._",
         "runtime.native.system.4.3.0.nupkg.sha512",
         "runtime.native.system.nuspec"
+      ]
+    },
+    "Sendgrid/9.9.0": {
+      "sha512": "kuPTZhSmxQZbi6WKf1Fgy2xAWWgSGGt05LkVRHbDEr8dkFw2DIeerYEj6viHDEItPFHNZpsANykmGrJIIJKHJw==",
+      "type": "package",
+      "path": "sendgrid/9.9.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net452/SendGrid.dll",
+        "lib/net452/SendGrid.pdb",
+        "lib/net452/SendGrid.xml",
+        "lib/netstandard1.3/SendGrid.dll",
+        "lib/netstandard1.3/SendGrid.pdb",
+        "lib/netstandard1.3/SendGrid.xml",
+        "sendgrid.9.9.0.nupkg.sha512",
+        "sendgrid.nuspec"
       ]
     },
     "System.AppContext/4.1.0": {
@@ -6646,6 +6702,7 @@
     ".NETCoreApp,Version=v2.2": [
       "AzureTableStorageRepository >= 1.0.0",
       "Microsoft.Azure.WebJobs.Extensions.DurableTask >= 1.8.2",
+      "Microsoft.Azure.WebJobs.Extensions.SendGrid >= 3.0.0",
       "Microsoft.NET.Sdk.Functions >= 1.0.29",
       "Microsoft.NETCore.App >= 2.2.0"
     ]
@@ -6698,6 +6755,10 @@
           "Microsoft.Azure.WebJobs.Extensions.DurableTask": {
             "target": "Package",
             "version": "[1.8.2, )"
+          },
+          "Microsoft.Azure.WebJobs.Extensions.SendGrid": {
+            "target": "Package",
+            "version": "[3.0.0, )"
           },
           "Microsoft.NET.Sdk.Functions": {
             "target": "Package",

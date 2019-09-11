@@ -48,7 +48,7 @@ namespace AzureTableStorageRepository
                 CarName = model.CarPrice.Car.Name,
                 CurrencyCode = model.CarPrice.CurrencyCode,
                 Price  = model.CarPrice.Price,
-                SupplierBasePrice = model.CarPrice.SupplierPrice
+                //SupplierBasePrice = model.CarPrice.SupplierPrice
             };
             await _bookingCarPriceTable.Insert(bookingPrice);
 

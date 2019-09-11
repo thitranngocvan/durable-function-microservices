@@ -9,6 +9,7 @@ using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.Azure.WebJobs.Host;
 using Microsoft.Extensions.Logging;
+using SendGrid.Helpers.Mail;
 
 namespace DurableFunctionPresentation.CarsBookingMicroservices
 {
@@ -17,15 +18,26 @@ namespace DurableFunctionPresentation.CarsBookingMicroservices
         const string ConfirmBookingEvent = "ConfirmBooking";
         [FunctionName("CarsBookingApi")]
         public static async Task<BookingResponseModel> RunOrchestrator(
-            [OrchestrationTrigger] DurableOrchestrationContext context)
+            [OrchestrationTrigger] DurableOrchestrationContext context,
+             [SendGrid(ApiKey = "SendGridKey")] IAsyncCollector<SendGridMessage> messageCollector)
+
         {
             var bookingDetail = context.GetInput<BookingResponseModel>();
-            // wait for confirm action
+            var sendCustomerEmail = !string.IsNullOrEmpty(bookingDetail.CustomerEmail);
+            //var message = new SendGridMessage();
+            //var mailContent = "";
+            //var from = "";
+            //var subject = "";
+            //if (sendCustomerEmail)
+            //{
+            //    message.AddTo(bookingDetail.CustomerEmail);
+            //    message.AddContent("text/html", mailContent);
+            //    message.SetFrom(new EmailAddress(from));
+            //    message.SetSubject(subject);
 
-            // timer check on timeout and cancel order
-
-
-           
+            //    await messageCollector.AddAsync(message);
+            //}
+                   
 
             // return final result
 

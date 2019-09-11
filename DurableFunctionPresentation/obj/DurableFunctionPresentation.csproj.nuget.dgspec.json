@@ -105,6 +105,10 @@
               "target": "Package",
               "version": "[1.8.2, )"
             },
+            "Microsoft.Azure.WebJobs.Extensions.SendGrid": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
             "Microsoft.NET.Sdk.Functions": {
               "target": "Package",
               "version": "[1.0.29, )"

@@ -26,7 +26,8 @@ namespace DurableFunctionPresentation.Services
                         Id = new Random().Next(1, 100),
                         Name = sc.SupplierCar.Name
                     },
-                    Price = sc.SupplierBasePrice + (sc.SupplierBasePrice * 0.1M)
+                    Price = sc.SupplierBasePrice + (sc.SupplierBasePrice * 0.1M),
+                    PriceRateId = Guid.NewGuid()
                     //Supplier = supplier,
                     //BookingDetail = new BookingRequestDetail {
                     //    PickupDate = searchRequest.PickupDate,

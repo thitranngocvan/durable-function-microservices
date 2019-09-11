@@ -9,5 +9,7 @@ namespace AzureTableStorageRepository.Models
         public string BookingStatus { get; set; }
 
         public string Message { get; set; }
+
+        public string CustomerEmail { get; set; }
     }
 }
