@@ -1,0 +1,26 @@
+<div class="car-list">
+  <div class="carblock_2" *ngFor="let car of cars">
+    <div class="left">
+      <div class="top">
+        <h3>{{car.Car.Name}}</h3>
+      </div>
+      <div class="car"><i class="fa fa-arrow-circle-o-left"></i><i class="fa fa-arrow-circle-o-right"></i><span class="carblock_description">Cars within this class:</span><img class="carImage lazy" onerror="this.src='https://cdn.holidaycars.com/image/car/no-car-image.png';" [src]="car.Car.ImageUrl" style="display: inline;">
+        <div class="car_params"><i class="param passengers tooltip tooltip_mobile" title="For 4 passengers max."><span>4</span></i><i class="param doors tooltip tooltip_mobile" title="3 doors"><span>3</span></i><i class="param transmission tooltip tooltip_mobile" title="Manual transmission"><span>M</span></i><i class="param ac_param tooltip tooltip_mobile" title="Air conditioning"></i><i class="param fuel tooltip tooltip_mobile" title="Gasoline"><span>G</span></i></div>
+      </div>
+    </div>
+    <div class="right">
+      <div class="top">
+        
+      </div>
+      <div class="offer">
+        <div class="features">
+          
+      </div>
+      <div class="clearfix"></div>
+      <div class="offer_price">
+        <div class="price_wrapper"><span class="nowrap price_v2"><span class="nowrap">{{car.Price}} USD</span></span></div><a (click)="bookThisCar(car)" class="new_big_submit">Select this car</a>
+        <div style="clear:both;height:1px"></div>
+      </div>
+    </div>
+  </div>
+</div>

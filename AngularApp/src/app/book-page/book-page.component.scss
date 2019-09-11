@@ -1,0 +1,327 @@
+.carblock_2 {
+  display: inline-block;
+  width: 100%;
+  background: #fff;
+  margin: 20px 0 0 16px;
+}
+
+.carblock_2>div {
+  display: inline-block;
+  float: left;
+  vertical-align: top;
+}
+
+.carblock_2 .left {
+  width: 340px;
+}
+
+.carblock_2 .right {
+  width: 550px;
+}
+
+.carblock_2>div>.top {
+  box-sizing: border-box;
+  height: 77px;
+  border-bottom: 1px solid #f2f2f2;
+  padding-left: 24px;
+  padding-right: 20px;
+}
+
+.carblock_2>div>.car {
+  text-align: center;
+  padding-top: 15px;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.carblock_2>div>.offer,
+.carblock_2>div>.offer_price {
+  padding: 15px 24px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.carblock_2>div>.offer {
+  min-height: 155px;
+}
+
+.carblock_2>div>.top h3 {
+  margin-bottom: 0;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 600;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.carblock_2>.left>.top span {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.carblock_2>.right>.top {
+  padding-top: 13px;
+  white-space: nowrap;
+  flex-direction: row;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+}
+
+.carblock_2>div>.offer_price {
+  border-top: 1px solid #f2f2f2;
+}
+
+.choose_supplier {
+  border: 2px solid #dee1e5;
+  padding: 8px 10px;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-transition: all .4s;
+  -moz-transition: all .4s;
+  -o-transition: all .4s;
+  transition: all .4s;
+  height: 51px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+.choose_supplier:hover {
+  border-color: #333;
+}
+
+.choose_supplier img {
+  margin-right: 7px;
+}
+
+.choose_supplier i {
+  margin-left: 7px;
+}
+
+.choose_supplier_wrapper {
+  position: relative;
+  display: inline-block;
+  margin-right: 14px;
+  flex: none;
+}
+
+.package_name {
+  color: #3f8c44;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: inline-block;
+  font-weight: 600;
+  padding: 9px 10px;
+  line-height: 32px;
+  border: 1px solid #70bd5f;
+  height: 50px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+.package_title {
+  position: absolute;
+  color: #3f8c44;
+  font-size: 11px;
+  background-color: #fff;
+  top: -9px;
+  right: -68px;
+  padding: 2px;
+  display: inline-block;
+}
+
+.carblock_2>.left>.car>span {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin: 0 45px 0 45px;
+}
+
+.carblock_2>.left>.car img {
+  /*height: 135px;*/
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.carblock_2>.left>.car .fa-arrow-circle-o-left,
+.carblock_2>.left>.car .fa-arrow-circle-o-right {
+  font-size: 18px;
+  color: #dee1e5;
+  position: absolute;
+  display: inline-block;
+  top: 14px;
+  cursor: pointer;
+}
+
+.carblock_2>.left>.car .fa-arrow-circle-o-left:hover,
+.carblock_2>.left>.car .fa-arrow-circle-o-right:hover {
+  color: #333;
+}
+
+.carblock_2>.left>.car i.fa-arrow-circle-o-right {
+  right: 20px;
+}
+
+.carblock_2>.left>.car .fa-arrow-circle-o-left {
+  left: 20px;
+}
+
+.carblock_2>.left>.car .car_params i {
+  margin-top: 0;
+  margin-right: 5px;
+}
+
+.carblock_2>.left>.car .car_params i span {
+  font-size: 12px;
+  width: 18px;
+  height: 18px;
+  line-height: 18px;
+}
+
+.features,
+.includes {
+  display: inline-block;
+  float: left;
+  font-size: 12px;
+  color: #333;
+}
+
+.includes .carblock_description {
+  margin-bottom: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-right: 20px;
+}
+
+.includes .fa-check {
+  color: #70bd5f;
+}
+
+.features {
+  width: 310px;
+}
+
+.includes {
+  width: 192px;
+}
+
+.includes ul,
+.features ul {
+  padding: 0;
+  margin: 0 10px 0 0;
+  list-style: none;
+}
+
+.includes ul li,
+.features ul li {
+  margin-bottom: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.features ul li {
+  display: inline-block;
+  vertical-align: top;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  box-sizing: border-box;
+  padding-left: 20px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.features ul li>.carblock_description {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+
+.carblock_description {
+  font-size: 12px;
+  color: #adb5bd;
+  display: block;
+  line-height: 1.2;
+  margin-bottom: 2px;
+}
+
+.features div {
+  width: 50%;
+  float: left;
+}
+
+div.conditions {
+  width: 100%;
+  margin-top: 5px;
+  padding-right: 20px;
+  box-sizing: border-box;
+  display: flex;
+}
+
+div.conditions a {
+  color: #0a65b0;
+  border: 1px solid #0a65b0;
+  padding: 5px 10px;
+  border-radius: 15px;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.new_big_submit {
+  cursor: pointer;
+  float: right;
+  border: 0;
+  text-decoration: none;
+  margin-left: 20px;
+  -webkit-transition-property: background;
+  -webkit-transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease;
+  font-weight: 700;
+  background-color: #0067b2;
+  color: #fff;
+  padding: 15px;
+  border-radius: 4px;
+  box-shadow: inset 0px -4px 0px #075099;
+}
+
+.new_big_submit:hover {
+  text-decoration: none;
+  background-color: #2275b2;
+}
+
+.price_wrapper {
+  display: inline-block;
+  float: left;
+  margin-bottom: 20px;
+}
+
+.price_wrapper>div {
+  margin-top: 2px;
+}
+
+.price_v2 {
+  color: #0a65b0;
+  font-size: 26px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.prev_price {
+  color: #adb5bd;
+  text-decoration: line-through;
+  font-size: 18px;
+  float: left;
+  display: inline-block;
+  line-height: 1;
+}

@@ -1,0 +1,40 @@
+<div class="section driverdetails">
+  <form [formGroup]="formGroup">
+    <h2>We need more your details</h2>
+    <p class="description">Fields marked with * are required</p>
+    <fieldset>
+      <mat-form-field>
+        <input matInput formControlName="driverName" placeholder="Driver name">
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput formControlName="customerEmail" placeholder="Customer first name">
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput formControlName="customerFirstName" placeholder="Customer last name">
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput formControlName="customerLastName" placeholder="Customer email">
+      </mat-form-field>
+
+      <button mat-flat-button [disabled]="formGroup.invalid" color="primary" (click)="submit()">Submit</button>
+    </fieldset>
+  </form>
+
+  <div class="info" *ngIf="bookingInfo">
+    <div class="item">
+      <label class="label">Booking Id:</label>
+      <label class="value">{{bookingInfo.BookingGuid}}</label>
+    </div>
+    <div class="item">
+      <label class="label">Status:</label>
+      <label class="value">{{bookingInfo.BookingStatus}}</label>
+    </div>
+    <div class="item" *ngIf="bookingInfo.Message">
+      <label class="label">Message:</label>
+      <label class="value">{{bookingInfo.Message}}</label>
+    </div>
+  </div>
+</div>
