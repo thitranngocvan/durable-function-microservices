@@ -6,6 +6,8 @@
     "StorageAccount": "vttestntpa6ae",
     "StorageKey": "S7BsbbGRRLxlKRy0h9HV5fBnvGk36h3fN7EDf76L4854pCui1Tw6OSQdLOs+Dr/6AL29BVGbX6zKG4bIHdjQ3Q==",
     "SendGridKey": "S7BsbbGRRLxlKRy0h9HV5fBnvGk36h3fN7EDf76L4854pCui1Tw6OSQdLOs+Dr/6AL29BVGbX6zKG4bIHdjQ3Q==",
-    "AzureWebJobsSendGridApiKey": ""
+    "AzureWebJobsSendGridApiKey": "test",
+    "Localhost": true,
+    "BaseUrl": "http://localhost:7071"
   }
 }

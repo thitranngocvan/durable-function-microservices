@@ -24,10 +24,12 @@ namespace DurableFunctionPresentation.Services
                     Car = new Car
                     {
                         Id = new Random().Next(1, 100),
-                        Name = sc.SupplierCar.Name
+                        Name = sc.SupplierCar.Name,
+                        ImageUrl = sc.SupplierCar.ImageUrl
                     },
                     Price = sc.SupplierBasePrice + (sc.SupplierBasePrice * 0.1M),
                     PriceRateId = Guid.NewGuid()
+                    
                     //Supplier = supplier,
                     //BookingDetail = new BookingRequestDetail {
                     //    PickupDate = searchRequest.PickupDate,

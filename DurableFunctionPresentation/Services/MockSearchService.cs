@@ -12,14 +12,19 @@ namespace DurableFunctionPresentation.Services
     public static class MockSearchService
     {
         static PriceResultWrapper _searchResultFromDataFile;
-
+        public static bool IsLocalHost { get; set; }
         static MockSearchService()
         {
-            var dir = Environment.CurrentDirectory;
-            var dataFile = Path.Combine(dir, "data","cars.json");
+            
+           
+        }
+
+        public static void InitData()
+        {
+            var dir = IsLocalHost ? Environment.CurrentDirectory : "d://home//site//wwwroot";
+            var dataFile = Path.Combine(dir, "data", "cars.json");
             var dataString = File.ReadAllTextAsync(dataFile).GetAwaiter().GetResult();
             _searchResultFromDataFile = JsonConvert.DeserializeObject<PriceResultWrapper>(dataString);
-           
         }
 
         public static async Task<List<SupplierCarPrice>> SearchCars(CarSearchRequest searchRequest, int supplierId)
@@ -30,7 +35,8 @@ namespace DurableFunctionPresentation.Services
                 SupplierBasePrice = c.SupplierPrice,
                 SupplierCar = new SupplierCar {
                     Name = c.CarName,
-                    Seats = c.Seats
+                    Seats = c.Seats,
+                    ImageUrl = c.CarImage
                 }
                 
 

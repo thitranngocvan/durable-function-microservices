@@ -30,6 +30,11 @@ namespace DurableFunctionPresentation.FanOut_FanIn
             var searchRequest = context.GetInput<CarSearchRequest>();
             var suppliers = await context.CallActivityWithRetryAsync<List<Supplier>>("GetActiveSuppliers", RetryPolicy.DbReadRetryOption, null);
 
+            bool isLocalhost;
+            bool.TryParse(Environment.GetEnvironmentVariable("Localhost"), out isLocalhost);
+            MockSearchService.IsLocalHost = isLocalhost;
+            MockSearchService.InitData();
+
             var searchParallelTasks = new List<Task<List<CarPrice>>>();
             foreach (var sup in suppliers)
             {
@@ -67,6 +72,7 @@ namespace DurableFunctionPresentation.FanOut_FanIn
         {
             var r = inputs.GetInput<SupplierSearchRequest>();
             var carSearchService = new CarSearchService();
+            
             return await carSearchService.SearchCars(r.CarSearchRequest, r.Supplier);
         }
 

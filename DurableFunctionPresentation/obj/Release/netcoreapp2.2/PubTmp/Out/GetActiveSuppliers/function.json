@@ -1,0 +1,13 @@
+{
+  "generatedBy": "Microsoft.NET.Sdk.Functions-1.0.29",
+  "configurationSource": "attributes",
+  "bindings": [
+    {
+      "type": "activityTrigger",
+      "name": "inputs"
+    }
+  ],
+  "disabled": false,
+  "scriptFile": "../bin/DurableFunctionPresentation.dll",
+  "entryPoint": "DurableFunctionPresentation.FanOut_FanIn.CarsApi.GetActiveSuppliers"
+}

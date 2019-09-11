@@ -1,0 +1,554 @@
+{
+	"info": {
+		"_postman_id": "4032fff5-8780-4ef9-974f-a476de271f8d",
+		"name": "durable-function",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "PostCustomer",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"thitranngocvan\",\r\n  \"firstName\": \"Van\",\r\n  \"lastName\": \"Thi\",\r\n  \"boD\": \"1983-03-01T00:00:00\",\r\n  \"email\": \"thitranngocvan@gmail.com\",\r\n  \"phone\": \"128837434\"\r\n}\r\n"
+				},
+				"url": {
+					"raw": "https://carsbookingservices.azurewebsites.net/api/Cutomer/{username}?code={{auth_code}}",
+					"protocol": "https",
+					"host": [
+						"carsbookingservices",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"Cutomer",
+						"{username}"
+					],
+					"query": [
+						{
+							"key": "code",
+							"value": "{{auth_code}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetCustomer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://carsbookingservices.azurewebsites.net/api/Cutomer/thitranngocvan?code={{auth_code}}",
+					"protocol": "https",
+					"host": [
+						"carsbookingservices",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"Cutomer",
+						"thitranngocvan"
+					],
+					"query": [
+						{
+							"key": "code",
+							"value": "{{auth_code}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SearchCar",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f6e4d777-61cb-4268-9325-f85b9663a0ad",
+						"exec": [
+							"var jsonData = pm.response.json();",
+							"var instanceId =  jsonData.id;",
+							"pm.environment.set(\"cars_instance_id\", instanceId);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"pickupDate\": \"2019-10-01T09:00:00\",\r\n  \"returnDate\": \"2019-10-15T09:00:00\",\r\n  \"pickupLocation\": \"AMS\",\r\n  \"returnLocation\": \"AMS\",\r\n  \"currencyCode\": \"USD\"\r\n}\r\n"
+				},
+				"url": {
+					"raw": "{{base_url}}/api/HttpStart_SearchCar",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"HttpStart_SearchCar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SearchCar-PollingResult",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"pickupDate\": \"2019-10-01T09:00:00\",\r\n  \"returnDate\": \"2019-10-15T09:00:00\",\r\n  \"pickupLocation\": \"AMS\",\r\n  \"returnLocation\": \"AMS\",\r\n  \"currencyCode\": \"USD\"\r\n}\r\n"
+				},
+				"url": {
+					"raw": "{{base_url}}/runtime/webhooks/durabletask/instances/{{cars_instance_id}}?taskHub=DurableFunctionsHub&connection=Storage&code={{auth_code}}",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"runtime",
+						"webhooks",
+						"durabletask",
+						"instances",
+						"{{cars_instance_id}}"
+					],
+					"query": [
+						{
+							"key": "taskHub",
+							"value": "DurableFunctionsHub"
+						},
+						{
+							"key": "connection",
+							"value": "Storage"
+						},
+						{
+							"key": "code",
+							"value": "{{auth_code}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BookCar-Case1-Confirmed",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "8689da82-ebe6-4940-95c9-94e7df2f70eb",
+						"exec": [
+							"var jsonData = pm.response.json();",
+							"var instanceId =  jsonData.id;",
+							"pm.environment.set(\"booking1_instance_id\", instanceId);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \r\n   \"customerGuid\":\"18a497f9-2d50-4cd3-9d4b-ca65b2344072\",\r\n   \"driverName\":\"Van Thi\",\r\n   \"driverAge\":32,\r\n   \"customerEmail\": \"thitranngocvan@yahoo.com\",\r\n   \"customerFirstName\": \"Van\",\r\n   \"customerLastName\": \"Thi\",\r\n   \"bookingDetail\":{  \r\n      \"pickupLocation\":{  \r\n         \"id\":123,\r\n         \"name\":\"AMS\"\r\n      },\r\n      \"returnLocation\":{  \r\n         \"id\":456,\r\n         \"name\":\"HCMC\"\r\n      },\r\n      \"pickupDate\":\"2019-10-01T09:00:00\",\r\n      \"returnDate\":\"2019-10-15T09:00:00\"\r\n   },\r\n   \"carPrice\":{  \r\n      \"car\":{  \r\n         \"id\":123,\r\n         \"name\":\"Toyota Aygo\",\r\n         \"imageUrl\":\"https://cdn.holidaycars.com/image/car/toyota_aygo_3dr.jpg\",\r\n         \"carClassId\":1,\r\n         \"doors\":3,\r\n         \"seats\":4\r\n     \t\r\n      },\r\n      \"price\":61.21,\r\n      \"priceRateId\":\"a136bc07-f9f5-4623-95c2-5961d5b435fd\",\r\n      \"currencyCode\":\"USD\"\r\n   }\r\n}"
+				},
+				"url": {
+					"raw": "{{base_url}}/api/CarsBookingApi_HttpStart",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"CarsBookingApi_HttpStart"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BookCar-PollingForStatus-Pending",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f6e4d777-61cb-4268-9325-f85b9663a0ad",
+						"exec": [
+							"var jsonData = pm.response.json();",
+							"var instanceId =  jsonData.id;",
+							"pm.environment.set(\"cars_instance_id\", instanceId);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"pickupDate\": \"2019-10-01T09:00:00\",\r\n  \"returnDate\": \"2019-10-15T09:00:00\",\r\n  \"pickupLocation\": \"AMS\",\r\n  \"returnLocation\": \"AMS\",\r\n  \"currencyCode\": \"USD\"\r\n}\r\n"
+				},
+				"url": {
+					"raw": "{{base_url}}/runtime/webhooks/durabletask/instances/{{booking1_instance_id}}?taskHub=DurableFunctionsHub&connection=Storage&code={{auth_code}}",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"runtime",
+						"webhooks",
+						"durabletask",
+						"instances",
+						"{{booking1_instance_id}}"
+					],
+					"query": [
+						{
+							"key": "taskHub",
+							"value": "DurableFunctionsHub"
+						},
+						{
+							"key": "connection",
+							"value": "Storage"
+						},
+						{
+							"key": "code",
+							"value": "{{auth_code}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BookCar-ConfirmedAction",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f6e4d777-61cb-4268-9325-f85b9663a0ad",
+						"exec": [
+							"var jsonData = pm.response.json();",
+							"var instanceId =  jsonData.id;",
+							"pm.environment.set(\"cars_instance_id\", instanceId);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"InstanceId\": \"{{booking1_instance_id}}\"\r\n \r\n}\r\n"
+				},
+				"url": {
+					"raw": "{{base_url}}/api/ConfirmBooking?instanceId=2343434",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"ConfirmBooking"
+					],
+					"query": [
+						{
+							"key": "instanceId",
+							"value": "2343434"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BookCar-PollingForStatus-ConfirmedByCustomer",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f6e4d777-61cb-4268-9325-f85b9663a0ad",
+						"exec": [
+							"var jsonData = pm.response.json();",
+							"var instanceId =  jsonData.id;",
+							"pm.environment.set(\"cars_instance_id\", instanceId);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"pickupDate\": \"2019-10-01T09:00:00\",\r\n  \"returnDate\": \"2019-10-15T09:00:00\",\r\n  \"pickupLocation\": \"AMS\",\r\n  \"returnLocation\": \"AMS\",\r\n  \"currencyCode\": \"USD\"\r\n}\r\n"
+				},
+				"url": {
+					"raw": "http://localhost:7071/runtime/webhooks/durabletask/instances/{{booking1_instance_id}}?taskHub=DurableFunctionsHub&connection=Storage&code=GVaX6rxaLfINiEEnytaYJuCnhpP5MHhERfwTwjzRB8bNBtMhiZlmvA==",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7071",
+					"path": [
+						"runtime",
+						"webhooks",
+						"durabletask",
+						"instances",
+						"{{booking1_instance_id}}"
+					],
+					"query": [
+						{
+							"key": "taskHub",
+							"value": "DurableFunctionsHub"
+						},
+						{
+							"key": "connection",
+							"value": "Storage"
+						},
+						{
+							"key": "code",
+							"value": "GVaX6rxaLfINiEEnytaYJuCnhpP5MHhERfwTwjzRB8bNBtMhiZlmvA=="
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BookCar-Case2-Timeout",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f6e4d777-61cb-4268-9325-f85b9663a0ad",
+						"exec": [
+							"var jsonData = pm.response.json();",
+							"var instanceId =  jsonData.id;",
+							"pm.environment.set(\"booking2_instance_id\", instanceId);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \r\n   \"customerGuid\":\"18a497f9-2d50-4cd3-9d4b-ca65b2344999\",\r\n   \"driverName\":\"Van Thi 02\",\r\n   \"driverAge\":32,\r\n   \"bookingDetail\":{  \r\n      \"pickupLocation\":{  \r\n         \"id\":123,\r\n         \"name\":\"AMS\"\r\n      },\r\n      \"returnLocation\":{  \r\n         \"id\":456,\r\n         \"name\":\"HCMC\"\r\n      },\r\n      \"pickupDate\":\"2019-10-01T09:00:00\",\r\n      \"returnDate\":\"2019-10-15T09:00:00\"\r\n   },\r\n   \"carPrice\":{  \r\n      \"car\":{  \r\n         \"id\":456,\r\n         \"name\":\"Peugeot 108\",\r\n         \"imageUrl\":\"https://cdn.holidaycars.com/image/car/108-3d.jpg\",\r\n         \"carClassId\":1,\r\n         \"doors\":3,\r\n         \"seats\":4\r\n     \t\r\n      },\r\n      \"price\":250.00,\r\n      \"priceRateId\":\"123497f9-2d50-4cd3-9d4b-ca65b2344999\",\r\n      \"currencyCode\":\"USD\"\r\n   }\r\n}"
+				},
+				"url": {
+					"raw": "{{base_url}}/api/CarsBookingApi_HttpStart",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"CarsBookingApi_HttpStart"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BookCar-Timeout-PollingForStatus",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f6e4d777-61cb-4268-9325-f85b9663a0ad",
+						"exec": [
+							"var jsonData = pm.response.json();",
+							"var instanceId =  jsonData.id;",
+							"pm.environment.set(\"cars_instance_id\", instanceId);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"pickupDate\": \"2019-10-01T09:00:00\",\r\n  \"returnDate\": \"2019-10-15T09:00:00\",\r\n  \"pickupLocation\": \"AMS\",\r\n  \"returnLocation\": \"AMS\",\r\n  \"currencyCode\": \"USD\"\r\n}\r\n"
+				},
+				"url": {
+					"raw": "{{base_url}}/runtime/webhooks/durabletask/instances/{{booking2_instance_id}}?taskHub=DurableFunctionsHub&connection=Storage&code={{auth_code}}",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"runtime",
+						"webhooks",
+						"durabletask",
+						"instances",
+						"{{booking2_instance_id}}"
+					],
+					"query": [
+						{
+							"key": "taskHub",
+							"value": "DurableFunctionsHub"
+						},
+						{
+							"key": "connection",
+							"value": "Storage"
+						},
+						{
+							"key": "code",
+							"value": "{{auth_code}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BookCar-Timeout-PollingForStatus-after-5-mins",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f6e4d777-61cb-4268-9325-f85b9663a0ad",
+						"exec": [
+							"var jsonData = pm.response.json();",
+							"var instanceId =  jsonData.id;",
+							"pm.environment.set(\"cars_instance_id\", instanceId);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"pickupDate\": \"2019-10-01T09:00:00\",\r\n  \"returnDate\": \"2019-10-15T09:00:00\",\r\n  \"pickupLocation\": \"AMS\",\r\n  \"returnLocation\": \"AMS\",\r\n  \"currencyCode\": \"USD\"\r\n}\r\n"
+				},
+				"url": {
+					"raw": "http://localhost:7071/runtime/webhooks/durabletask/instances/{{booking2_instance_id}}?taskHub=DurableFunctionsHub&connection=Storage&code=GVaX6rxaLfINiEEnytaYJuCnhpP5MHhERfwTwjzRB8bNBtMhiZlmvA==",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7071",
+					"path": [
+						"runtime",
+						"webhooks",
+						"durabletask",
+						"instances",
+						"{{booking2_instance_id}}"
+					],
+					"query": [
+						{
+							"key": "taskHub",
+							"value": "DurableFunctionsHub"
+						},
+						{
+							"key": "connection",
+							"value": "Storage"
+						},
+						{
+							"key": "code",
+							"value": "GVaX6rxaLfINiEEnytaYJuCnhpP5MHhERfwTwjzRB8bNBtMhiZlmvA=="
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

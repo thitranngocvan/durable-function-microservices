@@ -19,6 +19,11 @@ namespace AzureTableStorageRepository.Models
 
         public int DriverAge { get; set; }
 
+        public string CustomerFirstName { get; set; }
+
+        public string CustomerLastName { get; set; }
+
+        public string CustomerEmail { get; set; }
         public BookingRequestDetail BookingDetail { get; set; }
 
     }

@@ -10,6 +10,8 @@
         public string Doors { get; set; }
         public string Seats { get; set; }
 
+        public string ImageUrl { get; set; }
+
         // public Supplier Supplier { get; set; }
     }
 }

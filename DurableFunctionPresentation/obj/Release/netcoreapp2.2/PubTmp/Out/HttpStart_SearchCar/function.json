@@ -1,0 +1,17 @@
+{
+  "generatedBy": "Microsoft.NET.Sdk.Functions-1.0.29",
+  "configurationSource": "attributes",
+  "bindings": [
+    {
+      "type": "httpTrigger",
+      "methods": [
+        "post"
+      ],
+      "authLevel": "anonymous",
+      "name": "req"
+    }
+  ],
+  "disabled": false,
+  "scriptFile": "../bin/DurableFunctionPresentation.dll",
+  "entryPoint": "DurableFunctionPresentation.FanOut_FanIn.CarsApi.HttpStart"
+}

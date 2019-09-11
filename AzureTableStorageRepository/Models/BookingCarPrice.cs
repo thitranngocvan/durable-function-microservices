@@ -14,5 +14,7 @@ namespace AzureTableStorageRepository.Models
         public decimal SupplierBasePrice { get; set; }
 
         public string CurrencyCode { get; set; }
+
+        public Guid CarPriceRate { get; set; }
     }
 }

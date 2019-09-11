@@ -22,6 +22,9 @@ namespace DurableFunctionPresentation
 
         public static AzureTableSettings PaymentTableSetting = new AzureTableSettings(StorageAccount, StorageKey, "Payments");
 
+        public static string SendGridKey = Environment.GetEnvironmentVariable("SendGridKey");
+
+        public static string BaseUrl = Environment.GetEnvironmentVariable("BaseUrl");
 
 
     }

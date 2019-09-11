@@ -8,9 +8,9 @@ namespace AzureTableStorageRepository
     {
         Task<BookingResponseModel> AddBooking(BookingRequestModel model);
 
-        Task<bool> CancelBooking(Guid bookingGuid, string cancelReason);
+        Task<bool> CancelBooking(Guid bookingGuid, string cancelReason, string instanceId);
 
-        Task<bool> ConfirmBooking(Guid bookingGuid);
+        Task<bool> ConfirmBooking(Guid bookingGuid, string instanceId);
 
         //Task<bool> CompletePayment()
     }

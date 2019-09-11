@@ -18,14 +18,14 @@ namespace DurableFunctionPresentation.Services
             return await _bookingRepository.AddBooking(model);
         }
 
-        public async Task<bool> CancelBooking(Guid bookingGuid, string cancelReason)
+        public async Task<bool> CancelBooking(Guid bookingGuid, string cancelReason, string instanceId)
         {
-            return await _bookingRepository.CancelBooking(bookingGuid, cancelReason);
+            return await _bookingRepository.CancelBooking(bookingGuid, cancelReason, instanceId);
         }
 
-        public async Task<bool> ConfirmBooking(Guid bookingGuid)
+        public async Task<bool> ConfirmBooking(Guid bookingGuid, string instanceId)
         {
-            return await _bookingRepository.ConfirmBooking(bookingGuid);
+            return await _bookingRepository.ConfirmBooking(bookingGuid,instanceId);
         }
     }
 }

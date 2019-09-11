@@ -1,0 +1,9 @@
+D:\Projects\durable-function-vnw-event\durable-function-microservices\AzureTableStorageRepository\bin\Release\netcoreapp2.2\AzureTableStorageRepository.deps.json
+D:\Projects\durable-function-vnw-event\durable-function-microservices\AzureTableStorageRepository\bin\Release\netcoreapp2.2\AzureTableStorageRepository.dll
+D:\Projects\durable-function-vnw-event\durable-function-microservices\AzureTableStorageRepository\bin\Release\netcoreapp2.2\AzureTableStorageRepository.pdb
+D:\Projects\durable-function-vnw-event\durable-function-microservices\AzureTableStorageRepository\obj\Release\netcoreapp2.2\AzureTableStorageRepository.csprojAssemblyReference.cache
+D:\Projects\durable-function-vnw-event\durable-function-microservices\AzureTableStorageRepository\obj\Release\netcoreapp2.2\AzureTableStorageRepository.csproj.CoreCompileInputs.cache
+D:\Projects\durable-function-vnw-event\durable-function-microservices\AzureTableStorageRepository\obj\Release\netcoreapp2.2\AzureTableStorageRepository.AssemblyInfoInputs.cache
+D:\Projects\durable-function-vnw-event\durable-function-microservices\AzureTableStorageRepository\obj\Release\netcoreapp2.2\AzureTableStorageRepository.AssemblyInfo.cs
+D:\Projects\durable-function-vnw-event\durable-function-microservices\AzureTableStorageRepository\obj\Release\netcoreapp2.2\AzureTableStorageRepository.dll
+D:\Projects\durable-function-vnw-event\durable-function-microservices\AzureTableStorageRepository\obj\Release\netcoreapp2.2\AzureTableStorageRepository.pdb
