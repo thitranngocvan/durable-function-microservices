@@ -17,6 +17,7 @@ export class ConfirmPageComponent implements OnInit {
   bookingInfo: any;
   instantId: string;
   isBooking = false;
+  isDone = false;
   messages = [
     'Wating for your confirm ...',
     'Still wating for your confirm ......',
@@ -90,6 +91,7 @@ export class ConfirmPageComponent implements OnInit {
           const { output } = poolResult;
           this.bookingInfo = output;
           this.isBooking = false;
+          this.isDone = true;
         });
     });
   }

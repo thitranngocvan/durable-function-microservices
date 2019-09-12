@@ -1,5 +1,5 @@
 <div class="section driverdetails">
-  <form [formGroup]="formGroup" *ngIf="formGroup">
+  <form [formGroup]="formGroup" *ngIf="formGroup && !isDone">
     <h2>We need more your details</h2>
     <p class="description">Fields marked with * are required</p>
     <fieldset>
