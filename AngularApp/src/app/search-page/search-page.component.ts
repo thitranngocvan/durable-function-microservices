@@ -13,6 +13,11 @@ import { CarListService } from '../car-list-page/car-list.service';
 })
 export class SearchPageComponent implements OnInit {
   isSearching = false;
+  messages = [
+    'Searching ...',
+    'Still Searching ......',
+    'Be patient, keep searching .........',
+  ];
   constructor(
     private searchService: SearchService,
     private confirmService: ConfirmService,

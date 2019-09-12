@@ -15,7 +15,13 @@ export class ConfirmPageComponent implements OnInit {
   formGroup: FormGroup;
   selectedCar: ICarModel;
   bookingInfo: any;
+  instantId: string;
   isBooking = false;
+  messages = [
+    'Wating for your confirm ...',
+    'Still wating for your confirm ......',
+    'Keep wating for your confirm .........',
+  ];
   constructor(
     private confirmService: ConfirmService,
     private router: Router,
@@ -75,6 +81,7 @@ export class ConfirmPageComponent implements OnInit {
           filter(poolResult => {
             console.log(poolResult);
             this.bookingInfo = poolResult.output;
+            this.instantId = poolResult.instanceId;
             return poolResult.runtimeStatus === 'Completed';
           }),
           take(1),

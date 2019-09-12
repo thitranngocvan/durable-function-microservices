@@ -23,6 +23,13 @@
     </fieldset>
   </form>
 
+  <div class="info" *ngIf="!bookingInfo && isBooking">
+    <h4>Please check your email to confirm this booking!</h4>
+    <div class="item">
+      <label class="label">Booking Id:</label>
+      <label class="value">{{instantId}}</label>
+    </div>
+  </div>
   <div class="info" *ngIf="bookingInfo">
     <div class="item">
       <label class="label">Booking Id:</label>
@@ -70,5 +77,5 @@
     </div>
   </div>
 
-  <app-loading *ngIf="isBooking"></app-loading>
+  <app-loading [messages]="messages" *ngIf="isBooking"></app-loading>
 </div>
