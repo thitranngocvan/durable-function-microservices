@@ -43,36 +43,14 @@
           </div>
           <div class="col-md-2 pd0">
             <div class="col-md-12 button-search">
-              <button mat-flat-button color="primary" (click)="search()">Search Now</button>
+              <button [disabled]="isSearching" mat-flat-button color="primary" (click)="search()">Search Now</button>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="loading-container" *ngIf="isSearching">
-        <div class="loading-animation">
-          <div id="layer0"></div>
-          <div id="layer1"></div>
-              <div id="anim_car1" class="animcar car2 car8">
-                <div class="wheels wheels8"></div>
-                <div class="message message1">Searching ...</div>
-                <div class="message message2">Still Searching ......</div>
-                <div class="message message3">Be patient, keep searching .........</div>
-              </div>
-              <div id="anim_car2" class="animcar car3 car5">
-                <div class="wheels wheels5"></div>
-                <div class="message message1">Searching ...</div>
-                <div class="message message2">Still Searching ......</div>
-                <div class="message message3">Be patient, keep searching .........</div>
-              </div>
-              <div id="anim_car3" class="animcar car4 car1">
-                <div class="wheels wheels1"></div>
-                <div class="message message1">Searching ...</div>
-                <div class="message message2">Still Searching ......</div>
-                <div class="message message3">Be patient, keep searching .........</div>
-              </div>
-        </div>
-      </div>
+      <app-loading *ngIf="isSearching"></app-loading>
+
     </div>
   </div>
 </div>

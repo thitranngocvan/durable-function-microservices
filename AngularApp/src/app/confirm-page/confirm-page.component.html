@@ -1,5 +1,5 @@
 <div class="section driverdetails">
-  <form [formGroup]="formGroup">
+  <form [formGroup]="formGroup" *ngIf="formGroup">
     <h2>We need more your details</h2>
     <p class="description">Fields marked with * are required</p>
     <fieldset>
@@ -8,18 +8,18 @@
       </mat-form-field>
 
       <mat-form-field>
-        <input matInput formControlName="customerEmail" placeholder="Customer first name">
+        <input matInput formControlName="customerFirstName" placeholder="Customer first name">
       </mat-form-field>
 
       <mat-form-field>
-        <input matInput formControlName="customerFirstName" placeholder="Customer last name">
+        <input matInput formControlName="customerLastName" placeholder="Customer last name">
       </mat-form-field>
 
       <mat-form-field>
-        <input matInput formControlName="customerLastName" placeholder="Customer email">
+        <input matInput formControlName="customerEmail" placeholder="Customer email">
       </mat-form-field>
 
-      <button mat-flat-button [disabled]="formGroup.invalid" color="primary" (click)="submit()">Submit</button>
+      <button mat-flat-button [disabled]="formGroup.invalid || isBooking" color="primary" (click)="submit()">Submit</button>
     </fieldset>
   </form>
 
@@ -36,5 +36,39 @@
       <label class="label">Message:</label>
       <label class="value">{{bookingInfo.Message}}</label>
     </div>
+    <div class="item" *ngIf="bookingInfo.CarName">
+      <label class="label">Your car:</label>
+      <label class="value">{{bookingInfo.CarName}}</label>
+    </div>
+    <div class="item" *ngIf="bookingInfo.CarPrice">
+      <label class="label">Price:</label>
+      <label class="value">{{bookingInfo.CarPrice}} USD</label>
+    </div>
+    <div class="item" *ngIf="bookingInfo.CustomerEmail">
+      <label class="label">Email:</label>
+      <label class="value">{{bookingInfo.CustomerEmail}}</label>
+    </div>
+    <div class="item" *ngIf="bookingInfo.DriverName">
+      <label class="label">Driver:</label>
+      <label class="value">{{bookingInfo.DriverName}}</label>
+    </div>
+    <div class="item" *ngIf="bookingInfo.PickupDate">
+      <label class="label">Pickup date:</label>
+      <label class="value">{{bookingInfo.PickupDate}}</label>
+    </div>
+    <div class="item" *ngIf="bookingInfo.ReturnDate">
+      <label class="label">Return date:</label>
+      <label class="value">{{bookingInfo.ReturnDate}}</label>
+    </div>
+    <div class="item" *ngIf="bookingInfo.PickupLocation">
+      <label class="label">Pickup location:</label>
+      <label class="value">{{bookingInfo.PickupLocation}}</label>
+    </div>
+    <div class="item" *ngIf="bookingInfo.ReturnLocation">
+      <label class="label">Return location:</label>
+      <label class="value">{{bookingInfo.ReturnLocation}}</label>
+    </div>
   </div>
+
+  <app-loading *ngIf="isBooking"></app-loading>
 </div>

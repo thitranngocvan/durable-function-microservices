@@ -1,0 +1,569 @@
+.loading-container {
+  .loading-animation {
+    z-index: 1000000000;
+    position: fixed;
+    width: 100%;
+    height: 150px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 1;
+  }
+}
+
+#layer0 {
+	background: transparent url("https://cdn.holidaycars.com/image/waitlayer/loader/mountains.png") 0 top repeat-x;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	animation: layer0Move 120s linear infinite;
+}
+#layer1 {
+	background: transparent url("https://cdn.holidaycars.com/image/waitlayer/loader/city.png") 0 bottom repeat-x;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	background-size: 324px 100px;
+	animation: layer1Move 70s linear infinite;
+}
+@media 	only screen and (-webkit-min-device-pixel-ratio:1.5), only screen and (min--moz-device-pixel-ratio:1.5), only screen and (-o-min-device-pixel-ratio:3/2), only screen and (min-resolution:1.5dppx), only screen and (min-resolution:144dpi) {
+	#layer1 {
+		background-image: url("https://cdn.holidaycars.com/image/waitlayer/loader/city2x.png");
+	}
+}
+.animcar {
+	width: 90px;
+	height: 38px;
+	position: absolute;
+	bottom: 22px;
+	left: -90px;
+}
+#anim_car1 {
+	animation: carMoving1 45s linear infinite;
+}
+#anim_car2 {
+	animation: carMoving2 45s linear infinite;
+}
+#anim_car3 {
+	animation: carMoving3 45s linear infinite;
+}
+.wheels {
+	position: absolute;
+	width: 90px;
+	height: 38px;
+	animation: toggleOpacity 1s linear infinite;
+}
+.car1 {
+	background: transparent url("https://cdn.holidaycars.com/image/waitlayer/loader/car1.png") left top no-repeat;
+}
+@media 	only screen and (-webkit-min-device-pixel-ratio:1.5), only screen and (min--moz-device-pixel-ratio:1.5), only screen and (-o-min-device-pixel-ratio:3/2), only screen and (min-resolution:1.5dppx), only screen and (min-resolution:144dpi) {
+	.car1 {
+		background-image: url("https://cdn.holidaycars.com/image/waitlayer/loader/car12x.png");
+		background-size: 90px 38px;
+	}
+}
+.car2 {
+	background: transparent url("https://cdn.holidaycars.com/image/waitlayer/loader/car2.png") left top no-repeat;
+}
+@media 	only screen and (-webkit-min-device-pixel-ratio:1.5), only screen and (min--moz-device-pixel-ratio:1.5), only screen and (-o-min-device-pixel-ratio:3/2), only screen and (min-resolution:1.5dppx), only screen and (min-resolution:144dpi) {
+	.car2 {
+		background-image: url("https://cdn.holidaycars.com/image/waitlayer/loader/car22x.png");
+		background-size: 90px 38px;
+	}
+}
+.car3 {
+	background: transparent url("https://cdn.holidaycars.com/image/waitlayer/loader/car3.png") left top no-repeat;
+}
+@media 	only screen and (-webkit-min-device-pixel-ratio:1.5), only screen and (min--moz-device-pixel-ratio:1.5), only screen and (-o-min-device-pixel-ratio:3/2), only screen and (min-resolution:1.5dppx), only screen and (min-resolution:144dpi) {
+	.car3 {
+		background-image: url("https://cdn.holidaycars.com/image/waitlayer/loader/car32x.png");
+		background-size: 90px 38px;
+	}
+}
+.car4 {
+	background: transparent url("https://cdn.holidaycars.com/image/waitlayer/loader/car4.png") left top no-repeat;
+}
+@media 	only screen and (-webkit-min-device-pixel-ratio:1.5), only screen and (min--moz-device-pixel-ratio:1.5), only screen and (-o-min-device-pixel-ratio:3/2), only screen and (min-resolution:1.5dppx), only screen and (min-resolution:144dpi) {
+	.car4 {
+		background-image: url("https://cdn.holidaycars.com/image/waitlayer/loader/car42x.png");
+		background-size: 90px 38px;
+	}
+}
+.car5 {
+	background: transparent url("https://cdn.holidaycars.com/image/waitlayer/loader/car5.png") left top no-repeat;
+}
+@media 	only screen and (-webkit-min-device-pixel-ratio:1.5), only screen and (min--moz-device-pixel-ratio:1.5), only screen and (-o-min-device-pixel-ratio:3/2), only screen and (min-resolution:1.5dppx), only screen and (min-resolution:144dpi) {
+	.car5 {
+		background-image: url("https://cdn.holidaycars.com/image/waitlayer/loader/car52x.png");
+		background-size: 90px 38px;
+	}
+}
+.car6 {
+	background: transparent url("https://cdn.holidaycars.com/image/waitlayer/loader/car6.png") left top no-repeat;
+}
+@media 	only screen and (-webkit-min-device-pixel-ratio:1.5), only screen and (min--moz-device-pixel-ratio:1.5), only screen and (-o-min-device-pixel-ratio:3/2), only screen and (min-resolution:1.5dppx), only screen and (min-resolution:144dpi) {
+	.car6 {
+		background-image: url("https://cdn.holidaycars.com/image/waitlayer/loader/car62x.png");
+		background-size: 90px 38px;
+	}
+}
+.car7 {
+	background: transparent url("https://cdn.holidaycars.com/image/waitlayer/loader/car7.png") left top no-repeat;
+}
+@media 	only screen and (-webkit-min-device-pixel-ratio:1.5), only screen and (min--moz-device-pixel-ratio:1.5), only screen and (-o-min-device-pixel-ratio:3/2), only screen and (min-resolution:1.5dppx), only screen and (min-resolution:144dpi) {
+	.car7 {
+		background-image: url("https://cdn.holidaycars.com/image/waitlayer/loader/car72x.png");
+		background-size: 90px 38px;
+	}
+}
+.car8 {
+	background: transparent url("https://cdn.holidaycars.com/image/waitlayer/loader/car8.png") left top no-repeat;
+}
+@media 	only screen and (-webkit-min-device-pixel-ratio:1.5), only screen and (min--moz-device-pixel-ratio:1.5), only screen and (-o-min-device-pixel-ratio:3/2), only screen and (min-resolution:1.5dppx), only screen and (min-resolution:144dpi) {
+	.car8 {
+		background-image: url("https://cdn.holidaycars.com/image/waitlayer/loader/car82x.png");
+		background-size: 90px 38px;
+	}
+}
+.wheels1 {
+	background: transparent url("https://cdn.holidaycars.com/image/waitlayer/loader/wheels1.png") left top no-repeat;
+}
+@media 	only screen and (-webkit-min-device-pixel-ratio:1.5), only screen and (min--moz-device-pixel-ratio:1.5), only screen and (-o-min-device-pixel-ratio:3/2), only screen and (min-resolution:1.5dppx), only screen and (min-resolution:144dpi) {
+	.wheels1 {
+		background-image: url("https://cdn.holidaycars.com/image/waitlayer/loader/wheels12x.png");
+		background-size: 90px 38px;
+	}
+}
+.wheels2 {
+	background: transparent url("https://cdn.holidaycars.com/image/waitlayer/loader/wheels2.png") left top no-repeat;
+}
+@media 	only screen and (-webkit-min-device-pixel-ratio:1.5), only screen and (min--moz-device-pixel-ratio:1.5), only screen and (-o-min-device-pixel-ratio:3/2), only screen and (min-resolution:1.5dppx), only screen and (min-resolution:144dpi) {
+	.wheels2 {
+		background-image: url("https://cdn.holidaycars.com/image/waitlayer/loader/wheels22x.png");
+		background-size: 90px 38px;
+	}
+}
+.wheels3 {
+	background: transparent url("https://cdn.holidaycars.com/image/waitlayer/loader/wheels3.png") left top no-repeat;
+}
+@media 	only screen and (-webkit-min-device-pixel-ratio:1.5), only screen and (min--moz-device-pixel-ratio:1.5), only screen and (-o-min-device-pixel-ratio:3/2), only screen and (min-resolution:1.5dppx), only screen and (min-resolution:144dpi) {
+	.wheels3 {
+		background-image: url("https://cdn.holidaycars.com/image/waitlayer/loader/wheels32x.png");
+		background-size: 90px 38px;
+	}
+}
+.wheels4 {
+	background: transparent url("https://cdn.holidaycars.com/image/waitlayer/loader/wheels4.png") left top no-repeat;
+}
+@media 	only screen and (-webkit-min-device-pixel-ratio:1.5), only screen and (min--moz-device-pixel-ratio:1.5), only screen and (-o-min-device-pixel-ratio:3/2), only screen and (min-resolution:1.5dppx), only screen and (min-resolution:144dpi) {
+	.wheels4 {
+		background-image: url("https://cdn.holidaycars.com/image/waitlayer/loader/wheels42x.png");
+		background-size: 90px 38px;
+	}
+}
+.wheels5 {
+	background: transparent url("https://cdn.holidaycars.com/image/waitlayer/loader/wheels5.png") left top no-repeat;
+}
+@media 	only screen and (-webkit-min-device-pixel-ratio:1.5), only screen and (min--moz-device-pixel-ratio:1.5), only screen and (-o-min-device-pixel-ratio:3/2), only screen and (min-resolution:1.5dppx), only screen and (min-resolution:144dpi) {
+	.wheels5 {
+		background-image: url("https://cdn.holidaycars.com/image/waitlayer/loader/wheels52x.png");
+		background-size: 90px 38px;
+	}
+}
+.wheels6 {
+	background: transparent url("https://cdn.holidaycars.com/image/waitlayer/loader/wheels6.png") left top no-repeat;
+}
+@media 	only screen and (-webkit-min-device-pixel-ratio:1.5), only screen and (min--moz-device-pixel-ratio:1.5), only screen and (-o-min-device-pixel-ratio:3/2), only screen and (min-resolution:1.5dppx), only screen and (min-resolution:144dpi) {
+	.wheels6 {
+		background-image: url("https://cdn.holidaycars.com/image/waitlayer/loader/wheels62x.png");
+		background-size: 90px 38px;
+	}
+}
+.wheels7 {
+	background: transparent url("https://cdn.holidaycars.com/image/waitlayer/loader/wheels7.png") left top no-repeat;
+}
+@media 	only screen and (-webkit-min-device-pixel-ratio:1.5), only screen and (min--moz-device-pixel-ratio:1.5), only screen and (-o-min-device-pixel-ratio:3/2), only screen and (min-resolution:1.5dppx), only screen and (min-resolution:144dpi) {
+	.wheels7 {
+		background-image: url("https://cdn.holidaycars.com/image/waitlayer/loader/wheels72x.png");
+		background-size: 90px 38px;
+	}
+}
+.wheels8 {
+	background: transparent url("https://cdn.holidaycars.com/image/waitlayer/loader/wheels8.png") left top no-repeat;
+}
+@media 	only screen and (-webkit-min-device-pixel-ratio:1.5), only screen and (min--moz-device-pixel-ratio:1.5), only screen and (-o-min-device-pixel-ratio:3/2), only screen and (min-resolution:1.5dppx), only screen and (min-resolution:144dpi) {
+	.wheels8 {
+		background-image: url("https://cdn.holidaycars.com/image/waitlayer/loader/wheels82x.png");
+		background-size: 90px 38px;
+	}
+}
+.message {
+	position: absolute;
+	width: 200px;
+	top: -130px;
+	left: -50px;
+	opacity: 0;
+	font-size: 14px;
+	padding: 12px;
+	text-align: center;
+}
+.message1 {
+	background: #fff;
+	color: #678192;
+}
+.message1:after {
+	content: "";
+	position: absolute;
+	left: 150px;
+	bottom: -30px;
+	width: 0;
+	height: 0;
+	border-top: 30px solid #fff;
+	border-right: 20px solid transparent;
+}
+#anim_car1 .message2 {
+	animation: Car1SecondMessage 45s linear;
+}
+.message2 {
+	background: #fff;
+	color: #678192;
+}
+.message2:after {
+	content: "";
+	position: absolute;
+	left: 30px;
+	bottom: -30px;
+	width: 0;
+	height: 0;
+	border-top: 30px solid #fff;
+	border-left: 20px solid transparent;
+}
+#anim_car1 .message3 {
+	animation: Car1ThirdMessage 45s linear;
+}
+.message3 {
+	background: #fff;
+	color: #678192;
+}
+.message3:after {
+	content: "";
+	position: absolute;
+	left: 150px;
+	bottom: -30px;
+	width: 0;
+	height: 0;
+	border-top: 30px solid #fff;
+	border-right: 20px solid transparent;
+}
+#anim_car1 .message1 {
+	animation: Car1FirstMessage 45s linear;
+}
+#anim_car1 .message2 {
+	animation: Car1SecondMessage 45s linear;
+}
+#anim_car1 .message3 {
+	animation: Car1ThirdMessage 45s linear;
+}
+#anim_car2 .message1 {
+	animation: Car2FirstMessage 45s linear;
+}
+#anim_car2 .message2 {
+	animation: Car2SecondMessage 45s linear;
+}
+#anim_car2 .message3 {
+	animation: Car2ThirdMessage 45s linear;
+}
+#anim_car3 .message1 {
+	animation: Car3FirstMessage 45s linear;
+}
+#anim_car3 .message2 {
+	animation: Car3SecondMessage 45s linear;
+}
+#anim_car3 .message3 {
+	animation: Car3ThirdMessage 45s linear;
+}
+@keyframes toggleOpacity {
+	10% {
+		opacity: 0;
+	}
+	20% {
+		opacity: 1;
+	}
+	30% {
+		opacity: 0;
+	}
+	40% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+	}
+	60% {
+		opacity: 1;
+	}
+	70% {
+		opacity: 0;
+	}
+	80% {
+		opacity: 1;
+	}
+	90% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes carMoving1 {
+	0% {
+		left: -90px;
+	}
+	33% {
+		left: 100%;
+	}
+	100% {
+		left: 100%;
+	}
+}
+@keyframes carMoving2 {
+	33% {
+		left: -90px;
+	}
+	66% {
+		left: 100%;
+	}
+	100% {
+		left: 100%
+	}
+}
+@keyframes carMoving3 {
+	66% {
+		left: -90px;
+	}
+	100% {
+		left: 100%
+	}
+}
+@keyframes Car1FirstMessage {
+	0% {
+		opacity: 0;
+	}
+	2.999% {
+		opacity: 0;
+	}
+	3% {
+		opacity: 1;
+	}
+	10.999% {
+		opacity: 1;
+	}
+	11% {
+		opacity: 0;
+	}
+}
+@keyframes Car1SecondMessage {
+	0% {
+		opacity: 0;
+	}
+	11.499% {
+		opacity: 0;
+	}
+	11.5% {
+		opacity: 1;
+	}
+	21.999% {
+		opacity: 1;
+	}
+	22% {
+		opacity: 0;
+	}
+}
+@keyframes Car1ThirdMessage {
+	0% {
+		opacity: 0;
+	}
+	22.999% {
+		opacity: 0;
+	}
+	23% {
+		opacity: 1;
+	}
+	30.499% {
+		opacity: 1;
+	}
+	30.5% {
+		opacity: 0;
+	}
+}
+@keyframes Car2FirstMessage {
+	0% {
+		opacity: 0;
+	}
+	35.499% {
+		opacity: 0;
+	}
+	35.5% {
+		opacity: 1;
+	}
+	43.999% {
+		opacity: 1;
+	}
+	44% {
+		opacity: 0;
+	}
+}
+@keyframes Car2SecondMessage {
+	0% {
+		opacity: 0;
+	}
+	44.999% {
+		opacity: 0;
+	}
+	45% {
+		opacity: 1;
+	}
+	54.999% {
+		opacity: 1;
+	}
+	55% {
+		opacity: 0;
+	}
+}
+@keyframes Car2ThirdMessage {
+	0% {
+		opacity: 0;
+	}
+	55.999% {
+		opacity: 0;
+	}
+	56% {
+		opacity: 1;
+	}
+	63.499% {
+		opacity: 1;
+	}
+	63.5% {
+		opacity: 0;
+	}
+}
+@keyframes Car3FirstMessage {
+	0% {
+		opacity: 0;
+	}
+	68.499% {
+		opacity: 0;
+	}
+	68.5% {
+		opacity: 1;
+	}
+	76.999% {
+		opacity: 1;
+	}
+	77% {
+		opacity: 0;
+	}
+}
+@keyframes Car3SecondMessage {
+	0% {
+		opacity: 0;
+	}
+	77.999% {
+		opacity: 0;
+	}
+	78% {
+		opacity: 1;
+	}
+	87.999% {
+		opacity: 1;
+	}
+	88% {
+		opacity: 0;
+	}
+}
+@keyframes Car3ThirdMessage {
+	0% {
+		opacity: 0;
+	}
+	88.999% {
+		opacity: 0;
+	}
+	89% {
+		opacity: 1;
+	}
+	97.499% {
+		opacity: 1;
+	}
+	97.5% {
+		opacity: 0;
+	}
+}
+@keyframes layer0Move {
+	0% {
+		background-position: 0 top;
+	}
+	100% {
+		background-position: -100px top;
+	}
+}
+@keyframes layer1Move {
+	0% {
+		background-position: 0 bottom;
+	}
+	100% {
+		background-position: -2000px bottom;
+	}
+}
+@keyframes carMovingMobile1 {
+	0% {
+		left: -90px;
+	}
+	2% {
+		left: 100px;
+	}
+	30% {
+		left: 100px;
+	}
+	32% {
+		left: 100%;
+	}
+	100% {
+		left: 100%;
+	}
+}
+@keyframes carMovingMobile2 {
+	0% {
+		left: -90px;
+	}
+	32% {
+		left: -90px;
+	}
+	34% {
+		left: 100px;
+	}
+	64% {
+		left: 100px;
+	}
+	66% {
+		left: 100%;
+	}
+	100% {
+		left: 100%;
+	}
+}
+@keyframes carMovingMobile3 {
+	0% {
+		left: -90px;
+	}
+	66% {
+		left: -90px;
+	}
+	68% {
+		left: 100px;
+	}
+	97% {
+		left: 100px;
+	}
+	100% {
+		left: 100%
+	}
+}

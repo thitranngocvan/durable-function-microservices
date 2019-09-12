@@ -8,17 +8,18 @@ import { MatInputModule } from '@angular/material/input';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SearchPageComponent } from './search-page/search-page.component';
-import { BookPageComponent } from './book-page/book-page.component';
 import { Routes, RouterModule } from '@angular/router';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { HttpClientModule } from '@angular/common/http';
 import { ConfirmPageComponent } from './confirm-page/confirm-page.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CarListPageComponent } from './car-list-page/car-list-page.component';
+import { LoadingComponent } from './loading/loading.component';
 
 const routes: Routes = [
   { path: 'search', component: SearchPageComponent },
-  { path: 'book', component: BookPageComponent },
+  { path: 'car-list', component: CarListPageComponent },
   { path: 'confirm', component: ConfirmPageComponent },
   { path: '**', redirectTo: 'search' },
 ];
@@ -27,8 +28,9 @@ const routes: Routes = [
    declarations: [
       AppComponent,
       SearchPageComponent,
-      BookPageComponent,
-      ConfirmPageComponent
+      CarListPageComponent,
+      ConfirmPageComponent,
+      LoadingComponent
    ],
    imports: [
       BrowserModule,

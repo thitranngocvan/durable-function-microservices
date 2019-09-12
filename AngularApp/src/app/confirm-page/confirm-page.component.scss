@@ -1,5 +1,7 @@
 .section {
-	border-top: 6px solid #ff9024;
+  border-top: 6px solid #ff9024;
+  margin: 18px 0 0 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .section h2 {
@@ -15,23 +17,19 @@
   color: #999;
 }
 
-.section fieldset {
-  margin-left: 20px;
-}
-
 fieldset {
   position: relative;
   display: flex;
   flex-direction: column;
-}
-
-fieldset {
   border: 0;
   margin: 0;
-  padding: 0;
+  padding-bottom: 20px !important;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .info {
+  margin: 0 20px;
   .item {
     display: flex;
     .label {

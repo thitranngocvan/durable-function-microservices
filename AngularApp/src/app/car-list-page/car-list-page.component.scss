@@ -1,3 +1,14 @@
+.section {
+  border-top: 6px solid #ff9024;
+  margin: 18px 0 0 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.section h2 {
+  display: block;
+  margin: 18px 20px 0 20px;
+}
+
 .carblock_2 {
   display: inline-block;
   width: 100%;

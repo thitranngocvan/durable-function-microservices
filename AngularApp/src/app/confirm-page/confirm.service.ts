@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { ICarModel } from '../book-page/car.model';
+import { ICarModel } from '../car-list-page/car.model';
 import { appConfig } from '../app-config.const';
 import { HttpClient } from '@angular/common/http';
 

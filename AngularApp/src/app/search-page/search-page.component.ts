@@ -2,9 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { SearchService } from './search.service';
 import { timer } from 'rxjs';
 import { takeUntil, skipWhile, map, filter, take, concatMap, tap, catchError } from 'rxjs/operators';
-import { BookService } from '../book-page/book.service';
 import { Router } from '@angular/router';
 import { ConfirmService } from '../confirm-page/confirm.service';
+import { CarListService } from '../car-list-page/car-list.service';
 
 @Component({
   selector: 'app-search-page',
@@ -16,7 +16,7 @@ export class SearchPageComponent implements OnInit {
   constructor(
     private searchService: SearchService,
     private confirmService: ConfirmService,
-    private carService: BookService,
+    private carService: CarListService,
     private router: Router,
   ) { }
 
@@ -48,7 +48,7 @@ export class SearchPageComponent implements OnInit {
           console.log(poolResult);
           const { output } = poolResult;
           this.carService.setCars(output['CarPrices']);
-          this.router.navigate(['/book']);
+          this.router.navigate(['/car-list']);
         });
     });
   }

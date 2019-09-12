@@ -1,6 +1,6 @@
 import { ConfirmService } from './confirm.service';
 import { Component, OnInit } from '@angular/core';
-import { ICarModel } from '../book-page/car.model';
+import { ICarModel } from '../car-list-page/car.model';
 import { Router } from '@angular/router';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { timer } from 'rxjs';
@@ -15,6 +15,7 @@ export class ConfirmPageComponent implements OnInit {
   formGroup: FormGroup;
   selectedCar: ICarModel;
   bookingInfo: any;
+  isBooking = false;
   constructor(
     private confirmService: ConfirmService,
     private router: Router,
@@ -44,6 +45,7 @@ export class ConfirmPageComponent implements OnInit {
   submit() {
     const formValue = this.formGroup.getRawValue();
     console.log(formValue);
+    this.isBooking = true;
     const bookCarModel = {
       ...formValue,
       customerGuid: '00000000-0000-0000-0000-000000000000',
@@ -80,6 +82,7 @@ export class ConfirmPageComponent implements OnInit {
           console.log(poolResult);
           const { output } = poolResult;
           this.bookingInfo = output;
+          this.isBooking = false;
         });
     });
   }
